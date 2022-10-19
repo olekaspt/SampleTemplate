@@ -15,6 +15,14 @@ IList<ItemType>::IList() : m_count(0)
 
 }
 
+template<class ItemType>
+int IList<ItemType>::getSize() const
+{
+	return m_count;
+}
+
+
+
 /** Returns true  if list is empty, otherwise true */
 template<class ItemType>
 bool IList<ItemType>::isEmpty() const
