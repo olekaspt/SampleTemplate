@@ -60,11 +60,10 @@ bool PointerBasedLinkedList<ItemType>::remove(ItemType val)
 template<class ItemType>
 void PointerBasedLinkedList<ItemType>::clear()
 {
-	delete m_head;
+	m_head = nullptr;
+	m_tail = nullptr;
 
-	//TODO - 
-	// dangling pointer warning
-	// what other private data members should be adjusted?
+
 }
 template<class ItemType>
 PointerBasedLinkedList<ItemType>::~PointerBasedLinkedList()

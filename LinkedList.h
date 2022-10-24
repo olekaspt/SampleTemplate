@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <memory.h>
 #include "Node.h"
 
 template<class ItemType>
@@ -69,8 +70,8 @@ public:
 	/** Generates a string of the contents of the LinkedList, and lists them in order.  */
 	std::string toString() const override;
 private:
-	Node<ItemType> * m_head;
-	Node<ItemType> * m_tail;// this is optional to use, but it does make things easier
+	std::shared_ptr<Node<ItemType>> m_head;
+	std::shared_ptr<Node<ItemType>> m_tail;// this is optional to use, but it does make things easier
 };
 
 
